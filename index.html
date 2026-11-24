@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branch 179 – Irrigation Winterization Checklist</title>
+<style>
+:root{--b:#14532d;--a:#2563eb;--w:#b45309;--bg:#f3f4f6}
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+header{background:var(--b);color:#fff;padding:14px 16px;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:1.2rem}
+header small{opacity:.85}
+.bar{height:12px;background:#ffffff40;border-radius:6px;margin-top:8px;overflow:hidden}
+.bar div{height:100%;background:#86efac;width:0;transition:width .3s}
+main{max-width:900px;margin:0 auto;padding:12px}
+.card{background:#fff;border-radius:10px;margin:12px 0;box-shadow:0 1px 3px #0003;overflow:hidden}
+.card>h2{margin:0;padding:10px 14px;background:#e5e7eb;font-size:1.05rem;display:flex;justify-content:space-between;cursor:pointer}
+.card>h2 span{font-weight:400;font-size:.85rem;color:#444}
+.body{padding:6px 14px 12px}
+.info{padding:12px 14px;font-size:.92rem;line-height:1.4}
+.warn{background:#fef3c7;border-left:4px solid var(--w);padding:8px 10px;margin:8px 0;font-size:.9rem}
+.added{background:#dbeafe;border-left:4px solid var(--a);padding:8px 10px;margin:8px 0;font-size:.9rem}
+.step{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #eee;align-items:flex-start}
+.step:last-child{border:0}
+.step input[type=checkbox]{width:24px;height:24px;flex:none;margin-top:2px}
+.step.done .t{color:#777}
+.step.done .tx{text-decoration:line-through}
+.t{flex:1;line-height:1.35}
+.tag{display:inline-block;font-size:.7rem;background:var(--a);color:#fff;border-radius:4px;padding:1px 5px;margin-right:4px;vertical-align:middle}
+.meta{font-size:.75rem;color:#666;margin-top:3px}
+.step textarea{width:100%;margin-top:5px;font:inherit;font-size:.85rem;border:1px solid #ccc;border-radius:5px;padding:4px;display:none}
+.step.shownote textarea{display:block}
+.nb{background:none;border:0;cursor:pointer;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;padding:12px 14px}
+label.f{font-size:.8rem;color:#444;display:block}
+.f input,.f select{width:100%;padding:6px;font:inherit;border:1px solid #bbb;border-radius:5px}
+ul.tools{list-style:none;margin:0;padding:6px 14px 12px}
+ul.tools li{padding:5px 0;display:flex;gap:10px;align-items:center}
+ul.tools input{width:22px;height:22px}
+.zones{display:flex;flex-wrap:wrap;gap:6px;padding:4px 0 8px}
+.zones label{background:#e0f2fe;border-radius:6px;padding:4px 10px;font-weight:600;cursor:pointer}
+.zones input{margin-right:5px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0}
+button.b{padding:9px 14px;border:0;border-radius:6px;background:var(--b);color:#fff;font-size:.9rem;cursor:pointer}
+button.b.g{background:#6b7280}
+.collapsed .body{display:none}
+@media print{header{position:static}.btns,.nb{display:none}.collapsed .body{display:block}.step textarea{display:block;border:0}body{background:#fff}.card{box-shadow:none;border:1px solid #ccc;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Branch 179 – Irrigation System Winterization (Back-Drain)</h1>
+  <small>4 submersible well pumps · stick-built pump houses · mild-day use expected</small>
+  <div class="bar"><div id="bar"></div></div>
+  <small id="pct">0% complete</small>
+</header>
+<main>
+  <div class="card" id="job"></div>
+  <div class="card">
+    <div class="info">
+      <b>Purpose:</b> Back-drain (relieve pressure from) the irrigation system before extended below-freezing temperatures to prevent freeze damage to: automatic filters, manual filters, above-ground pump-house piping, the 3&nbsp;in. hydrometer and connecting pipes, in-ground electric valves, quick-connect hose connections, and the well/city water split air-gap pipes and fittings.
+      <div class="warn"><b>Heat caution:</b> Pump houses are insulated with heaters on all winter, but the heaters are <u>not</u> intended to run 24/7 in extended freezing weather. A long power loss in freezing temperatures can cause serious damage – drain the system; do not rely on heaters.</div>
+      <div class="added"><b>Added notes (not on original sheets – verify):</b> Submersible pumps sit below the frost line in the wells, so protection focuses on above-ground pump-house piping, filters, spigots, and shallow valve boxes. Because the system may run on mild winter days, a <b>Mild-Day Use</b> and <b>Re-Drain</b> section is included at the end. Blue <span class="tag">ADDED</span> items are suggestions, not part of the original procedure.</div>
+    </div>
+  </div>
+  <div class="card"><h2>Wichita, KS (67207) Freeze History <span>NWS Wichita</span></h2><div class="info">
+    <table style="width:100%;border-collapse:collapse;font-size:.88rem">
+      <tr style="background:#f3f4f6"><th align="left">Threshold</th><th align="left">Average date / range</th><th align="left">Record early – late</th></tr>
+      <tr><td>First fall 32°F</td><td>Oct 25 (Oct 20–Nov 4)</td><td>Sep 22, 1995 – Nov 21, 1944</td></tr>
+      <tr><td>First fall 28°F</td><td>Nov 8 (Nov 1–14)</td><td>Oct 8, 2000 – Dec 8, 1998</td></tr>
+      <tr><td>Last spring 28°F</td><td>Mar 30 (Mar 26–Apr 4)</td><td>—</td></tr>
+      <tr><td>Last spring 32°F</td><td>Apr 9 (Apr 5–14)</td><td>Mar 10, 1946 – May 13, 1966</td></tr>
+    </table>
+    <p>About 103 days per year have a low at or below 32°F. Freezes can start in late October and run into mid-April, with mild days in between – hence the Re-Drain steps.</p>
+    <div class="added"><b>Planning guide (ADDED):</b> Have the system winterized by <b>Oct 20</b>, before the earliest typical first freeze. Treat any forecast low of 32°F or below as a re-drain trigger. Re-charge for the season after about <b>mid-April</b>. Source: <a href="https://www.weather.gov/ict/yearly" target="_blank">weather.gov/ict/yearly</a>, <a href="https://www.weather.gov/ict/freeze" target="_blank">weather.gov/ict/freeze</a>. Verify current forecast before every job.</div>
+  </div></div>
+  <div class="card"><h2>Tools / Equipment Required <span id="toolsCt"></span></h2><ul class="tools" id="toolList"></ul></div>
+  <div class="btns">
+    <button class="b" id="expand">Expand all</button>
+    <button class="b g" id="collapse">Collapse all</button>
+    <button class="b g" id="print">Print / Save PDF</button>
+    <button class="b g" id="reset">Reset checklist</button>
+  </div>
+  <div id="sections"></div>
+  <div class="card"><div class="info"><b>Sign-off:</b>
+    <div class="grid">
+      <label class="f">Completed by<input data-k="signBy"></label>
+      <label class="f">Date / time<input type="datetime-local" data-k="signDt"></label>
+      <label class="f">Supervisor review<input data-k="signSup"></label>
+    </div></div></div>
+  <p style="font-size:.75rem;color:#666;text-align:center">Progress saves automatically in this browser. Source: Branch 179 “Irrigation System Winterization (Back drain)” procedure, 2 pages.</p>
+</main>
+<script>
+const TOOLS=["Channel locks","Large universal shutoff key (red, box end)","Red sprinkler valve key (small fork)","12 VDC water pump","Large strap wrench (loosen filter unions)","Kawasaki Mule (powers water pump via cigarette-lighter receptacle)","Bagged mulch / valve-box cover access (for East box)"];
+const WELLS=["North","South","East","West"];
+const S=[
+{id:"pre",title:"0. Pre-Check",items:[
+ {t:"ADDED: Check forecast: extended below-freezing temperatures expected (back-drain trigger)."},
+ {t:"ADDED: Confirm WeatherTRAK access on phone/tablet and that the Mule is charged/fueled."},
+ {t:"ADDED: Gather all tools above; confirm sprinkler valve keys are in the parts area."}]},
+{id:"north",title:"1. North Well & System Mainline Drain – Pipe Clearing",items:[
+ {t:"Make sure one or more wells are ON and all ball valves in the pump houses are ON (except any wells that have not been used)."},
+ {t:"At the NW corner of the tree field, locate the two 10 in. round valve boxes. Remove the cover on the NW valve box (drain for the Well Mainline joining all 4 wells before the hydrometer)."},
+ {t:"Insert large red combination valve key (square box end); confirm you are on the valve operating nut."},
+ {t:"Open drain valve: turn key COUNTERCLOCKWISE until you hear/feel water flowing, then open one or two more turns."},
+ {t:"Check drain outlet just west of the west main road, ~2 ft off the north fence, for flowing water."},
+ {t:"Once water is flowing, return to NW corner and close drain valve CLOCKWISE – snug only, do not overtighten."}]},
+{id:"drain",title:"2. Drain Well / System Mainlines",items:[
+ {t:"Go to each pump house, open each VFD cover and press “Stop”. Confirm each well’s VFD is OFF.",wells:1},
+ {t:"In WeatherTRAK, turn ON zones (lets air into the system to help it drain):",zones:[14,15,16,17,50,51,52,53]},
+ {t:"Return to NW tree field drain valves. Open Well drain valve again, fully this time. You should hear/feel water flow, then slow down."},
+ {t:"Open valve box just EAST of the Well drain box (North System Mainline Drain Valve). Insert key, find operating nut, open completely to drain the North part of the system. Leave open."},
+ {t:"Travel to south end of property, just south of tree trellis row 0201. Remove cover on South Mainline drain valve box, insert key, open completely and let drain."},
+ {t:"While ALL drain valves are open, visit each pump house, open hose spigots and let them drain.",wells:1},
+ {t:"In each pump house, set inlet and outlet ball valves to quarter-turn (half-way between open and closed).",wells:1},
+ {t:"Pump houses with an Automatic Filter: loosen inlet and outlet unions (strap wrench) and let the filter drain. Manual filters: remove filter bowl, dump, reinstall bowl.",wells:1},
+ {t:"Return to all drain valves and close them – snug only, not tight."},
+ {t:"ADDED: Turn zones 14–17 and 50–53 OFF in WeatherTRAK once draining is finished."},
+ {t:"ADDED: Drain quick-connect hose connections and shallow in-ground electric valves; confirm no standing water at the 3 in. hydrometer and connecting pipes."},
+ {t:"ADDED: Verify VFDs remain OFF and pump-house heaters are on and operating.",wells:1}]},
+{id:"east",title:"3. Drain / Pump Out East Well – City Air-Gap Line (Uphill Side)",items:[
+ {t:"Grab 12 VDC pump and sprinkler valve key from the parts area. Take the Mule to the east fence line, straight east of the NE corner of the Shade Pad.",n:"Original sheet says “gray” sprinkler valve key here but “red” in step 4 and in the tool list – confirm which key you carry."},
+ {t:"Locate large rectangular valve box near fence; remove bagged mulch and cover. Lay pump in box and run hose downhill or into PVC pipe through the fence so water cannot re-enter the box. Connect pump power cord to Mule cigarette-lighter receptacle."},
+ {t:"If water is standing in box, turn Mule ignition ON and pump the box out. Then move pump into the 6 in. PVC tube and pump until water stops refilling the tube."},
+ {t:"Using the RED sprinkler valve key, open the valve in the 1½ in. PVC tube: insert key, ensure positive contact with valve, raise key slightly so you do NOT unscrew the jam nut on top. Turn COUNTERCLOCKWISE to open; run pump until water is all the way down and no longer rising in tube."},
+ {t:"Once water has stopped, close drain valve by turning red key CLOCKWISE until snug."},
+ {t:"Replace valve box cover and re-cover with bags of mulch."},
+ {t:"ADDED: Stow pump, hose, keys, and Mule; return 12 VDC pump to parts area."}]},
+{id:"final",title:"4. Final Verification",items:[
+ {t:"ADDED: All drain valves (NW well, North mainline, South mainline, East air-gap) closed snug and covers replaced."},
+ {t:"ADDED: All VFDs OFF; all four pump-house heaters on; doors closed/latched.",wells:1},
+ {t:"ADDED: Filters drained, unions loose, hose spigots open in each pump house.",wells:1},
+ {t:"ADDED: Record drain date and forecast low in the Job Info card above."}]},
+{id:"mild",title:"5. Mild-Day Use (Re-Charge) – ADDED",desc:"Use only on days well above freezing with no freeze forecast for the next 48+ hrs. Not on the original sheets – confirm with your supervisor.",items:[
+ {t:"Check 48-hr forecast low is safely above freezing and the day will warm above freezing."},
+ {t:"Confirm all four drain valves (NW well, North mainline, South mainline, East air-gap) are CLOSED snug."},
+ {t:"In each pump house: reinstall/hand-tighten filter unions and bowls; return inlet/outlet ball valves fully OPEN; close hose spigots.",wells:1},
+ {t:"Start well VFDs one at a time; walk the lines and check for leaks at unions, spigots, valve boxes.",wells:1},
+ {t:"Run irrigation per schedule/WeatherTRAK."},
+ {t:"Finish early enough in the day to complete re-drain while still above freezing."}]},
+{id:"redrain",title:"6. Re-Drain After Mild-Day Use – ADDED",desc:"Repeat before temperatures drop: stop VFDs, open drain valves, run zones for air, drain filters/spigots, quarter-turn ball valves, then close drain valves (Sections 1–3; East line only if it took on water).",items:[
+ {t:"All VFDs stopped.",wells:1},
+ {t:"Sections 1–2 repeated (mainline and filter drain)."},
+ {t:"East air-gap line pumped out if used (Section 3)."},
+ {t:"Heaters confirmed on in all pump houses.",wells:1}]}
+];
+const KEY="b179_winter_v1";
+let st=JSON.parse(localStorage.getItem(KEY)||"{}");
+const save=()=>localStorage.setItem(KEY,JSON.stringify(st));
+const $=s=>document.querySelector(s);
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+$("#job").innerHTML=`<h2>Job Info</h2><div class="grid">
+<label class="f">Date<input type="date" data-k="date"></label>
+<label class="f">Crew<input data-k="crew"></label>
+<label class="f">Forecast low (°F)<input type="number" data-k="low"></label>
+<label class="f">Reason<select data-k="reason"><option></option><option>Winterize – season end</option><option>Re-drain after mild-day use</option><option>Cold snap</option></select></label>
+<label class="f">Actual first freeze this season<input type="date" data-k="freeze"></label></div>`;
+document.querySelectorAll("[data-k]").forEach(e=>{e.value=st["f_"+e.dataset.k]||"";e.oninput=()=>{st["f_"+e.dataset.k]=e.value;save()}});
+$("#toolList").innerHTML=TOOLS.map((t,i)=>`<li><input type="checkbox" data-id="tool${i}"><span>${t}</span></li>`).join("");
+
+const root=$("#sections");
+S.forEach(s=>{
+ const c=document.createElement("div");c.className="card";
+ let h=`<h2>${s.title}<span id="ct_${s.id}"></span></h2><div class="body">${s.desc?`<div class="added">${s.desc}</div>`:""}`;
+ s.items.forEach((it,i)=>{
+  const id=`${s.id}_${i}`;
+  let extra="";
+  if(it.wells)extra+=`<div class="zones">`+WELLS.map(w=>`<label><input type="checkbox" data-id="${id}_${w}" data-parent="${id}">${w}</label>`).join("")+`</div>`;
+  if(it.zones)extra+=`<div class="zones">`+it.zones.map(z=>`<label><input type="checkbox" data-id="${id}_z${z}" data-parent="${id}">${z}</label>`).join("")+`</div>`;
+  const t=esc(it.t).replace(/^ADDED:\s*/,'<span class="tag">ADDED</span>');
+  h+=`<div class="step" data-step="${id}">${extra?`<span style="width:24px;flex:none"></span>`:`<input type="checkbox" data-id="${id}">`}
+  <div class="t"><span class="tx">${t}</span>${it.n?`<div class="warn">${esc(it.n)}</div>`:""}${extra}
+  <div class="meta" id="m_${id}"></div><textarea data-note="${id}" placeholder="Notes / issues…"></textarea></div>
+  <button class="nb" data-nb="${id}" title="Add note">📝</button></div>`;
+ });
+ c.innerHTML=h+"</div>";root.appendChild(c);
+ c.querySelector("h2").onclick=()=>c.classList.toggle("collapsed");
+});
+
+function refresh(){
+ document.querySelectorAll("input[data-id]").forEach(e=>e.checked=!!st[e.dataset.id]);
+ document.querySelectorAll("textarea[data-note]").forEach(e=>{e.value=st["n_"+e.dataset.note]||"";if(e.value)e.closest(".step").classList.add("shownote")});
+ let done=0,total=0;
+ S.forEach(s=>{let d=0,n=0;
+  s.items.forEach((it,i)=>{const id=`${s.id}_${i}`;
+   const subs=[...document.querySelectorAll(`[data-parent="${id}"]`)];
+   const ok=subs.length?subs.every(e=>st[e.dataset.id]):!!st[id];
+   if(subs.length){n+=subs.length;d+=subs.filter(e=>st[e.dataset.id]).length}else{n++;d+=ok?1:0}
+   document.querySelector(`[data-step="${id}"]`).classList.toggle("done",ok);
+   const ts=st["ts_"+id];$("#m_"+id).textContent=ts&&ok?"✔ "+ts:"";});
+  if(s.id!=="mild"&&s.id!=="redrain"){done+=d;total+=n}
+  $("#ct_"+s.id).textContent=`${d}/${n}`;
+ });
+ const tc=TOOLS.filter((_,i)=>st["tool"+i]).length;$("#toolsCt").textContent=`${tc}/${TOOLS.length}`;
+ const p=total?Math.round(done/total*100):0;$("#bar").style.width=p+"%";$("#pct").textContent=`${p}% of winterization (Sections 0–4) complete`;
+}
+document.addEventListener("change",e=>{
+ const id=e.target.dataset.id;if(!id)return;
+ st[id]=e.target.checked;
+ st["ts_"+(e.target.dataset.parent||id)]=new Date().toLocaleString([],{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});
+ save();refresh();
+});
+document.addEventListener("input",e=>{if(e.target.dataset.note){st["n_"+e.target.dataset.note]=e.target.value;save()}});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-nb]");if(b)b.closest(".step").classList.toggle("shownote")});
+$("#expand").onclick=()=>document.querySelectorAll("#sections .card").forEach(c=>c.classList.remove("collapsed"));
+$("#collapse").onclick=()=>document.querySelectorAll("#sections .card").forEach(c=>c.classList.add("collapsed"));
+$("#print").onclick=()=>print();
+$("#reset").onclick=()=>{if(confirm("Clear all checks, notes and job info?")){st={};save();location.reload()}};
+refresh();
+</script>
+</body>
+</html>
